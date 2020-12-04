@@ -41,20 +41,20 @@ def main():
                     if matrix[i][j]=="V":
                             list2.append((i,j))                 
         distance=[]
-        for val in list1:
-            if list2[0][1]>3:
+        for val in list2:
+            if list1[0][1]>3:
                 partition=2;
                 if val[1]>3:
-                    distance.append(abs(val[0]-list2[0][0]))
+                    distance.append(abs(val[0]-list1[0][0]))
                 else:
-                    distance.append(abs(val[0]-list2[0][0])+2)
+                    distance.append(abs(val[0]-list1[0][0])+2)
             else:
                 if val[1]>3:
-                    distance.append(abs(val[0]-list2[0][0])+2)
+                    distance.append(abs(val[0]-list1[0][0])+2)
                 else:
-                    distance.append(abs(val[0]-list2[0][0]))
+                    distance.append(abs(val[0]-list1[0][0]))
 
 
         distance.sort()
-        print(distance)
+        print(distance[0])
 main()
